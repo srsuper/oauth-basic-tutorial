@@ -32,7 +32,7 @@
 	  
 	  // This will redirect the page to facebook.  Pay special attention to the query
 	  // parameters, we are asking for a token to be sent back to the redirect_uri
-	  let client_id = '2025761017499969';
+	  let client_id = '492291348462899';
 	  document.location.href= [`https://www.facebook.com/v3.2/dialog/oauth?client_id=${client_id}`,
 				   `redirect_uri=${document.location.href}`,
 				   `response_type=token`,
@@ -54,7 +54,7 @@
       // Now that we have a token, we can make API calls to facebook.
       // Here we simply retrieve the user's name, email, and profile pic
       // to confirm the user's identity
-      fetch('https://graph.facebook.com/v3.2/me?fields=name,email,picture', {
+      fetch('https://graph.facebook.com/v11.0/me?fields=name,email,picture', {
 	  // IMPORTANT:  You must include the token in the Authroization header
 	  //             Otherwise how can facebook know who is calling?
 	  headers:{
